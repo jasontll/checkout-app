@@ -66,6 +66,17 @@ const CreditCardField = ({onLoad}) => {
         }
       }).then(function (hf) {
         console.log(hf);
+       hf.on('cardTypeChange', event => {
+//         this.cardErrors = null
+        if (event.cards.length === 1) {
+          console.log(event)
+//           this.cvvText = event.cards[0].code.name
+//           this.cvvSize = event.cards[0].code.size
+//           this.updateCardType(event.cards[0].type)
+        } else {
+//           this.updateCardType(null)
+        }
+      })
       });
     }
   }
